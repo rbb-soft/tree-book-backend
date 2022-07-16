@@ -1,0 +1,91 @@
+[
+  {
+    "id": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004",
+    "data": {
+      "first name": "Nelson",
+      "last name": "Barolin Maeso",
+      "birthday": "21/12/1954",
+      "avatar": "assets/img/M.jpg",
+      "id": "",
+      "gender": "M"
+    },
+    "rels": {
+      "spouses": [
+        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+      ],
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ]
+    }
+  },
+  {
+    "id": "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+    "data": {
+      "gender": "M",
+      "first name": "Richard",
+      "last name": "Barolin Bueno",
+      "birthday": "1977",
+      "avatar": "assets/img/M.jpg",
+      "id": ""
+    },
+    "rels": {
+      "mother": "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
+    }
+  },
+  {
+    "id": "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+    "data": {
+      "gender": "F",
+      "first name": "Lourdes Graciela",
+      "last name": "Bueno",
+      "birthday": "1956",
+      "avatar": "assets/img/F.jpg",
+      "id": ""
+    },
+    "rels": {
+      "spouses": [
+        "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
+      ],
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0"
+      ]
+    }
+  },
+  {
+    "id": "e6e06497-d536-4d9c-9881-afa8997dc30e",
+    "data": {
+      "gender": "F",
+      "first name": "Iris Giriselda",
+      "last name": "Dasilva Caetano",
+      "birthday": "1966",
+      "avatar": "assets/img/F.jpg",
+      "id": ""
+    },
+    "rels": {
+      "spouses": [
+        "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
+      ],
+      "children": [
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ]
+    }
+  },
+  {
+    "id": "c0051725-6db3-4155-bb58-672d731850e7",
+    "data": {
+      "gender": "M",
+      "first name": "Nelson Gabriel",
+      "last name": "Barolin Dasilva",
+      "birthday": "1990-03-04",
+      "avatar": "assets/img/M.jpg",
+      "id": ""
+    },
+    "rels": {
+      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004",
+      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e"
+    }
+  }
+]

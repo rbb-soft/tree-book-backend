@@ -1,0 +1,108 @@
+[
+  {
+    "rels": {
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ],
+      "spouses": [
+        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+      ]
+    },
+    "id": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004",
+    "data": {
+      "first name": "Nelson",
+      "last name": "Barolin Maeso",
+      "birthday": "1954-12-21",
+      "avatar": "assets/img/M.jpg",
+      "gender": "M"
+    }
+  },
+  {
+    "rels": {
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ],
+      "spouses": [
+        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+      ]
+    },
+    "id": "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+    "data": {
+      "first name": "Lourdes Graciela",
+      "last name": "Bueno",
+      "birthday": "1956-03-03",
+      "avatar": "assets/img/profile/F.jpg",
+      "gender": "F"
+    }
+  },
+  {
+    "rels": {
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ],
+      "spouses": [
+        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+      ],
+      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e",
+      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
+    },
+    "id": "c0051725-6db3-4155-bb58-672d731850e7",
+    "data": {
+      "first name": "Nelson Gabriel",
+      "last name": "Barolin Dasiva",
+      "birthday": "1990-03-04",
+      "avatar": "assets/img/profile/M.jpg",
+      "gender": "M"
+    }
+  },
+  {
+    "rels": {
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ],
+      "spouses": [
+        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+      ],
+      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e",
+      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
+    },
+    "id": "e6e06497-d536-4d9c-9881-afa8997dc30e",
+    "data": {
+      "first name": "Iris Griselda",
+      "last name": "Dasilva Caetano",
+      "birthday": "1966-06-30",
+      "avatar": "assets/img/profile/F.jpg",
+      "gender": "F"
+    }
+  },
+  {
+    "rels": {
+      "children": [
+        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+        "c0051725-6db3-4155-bb58-672d731850e7"
+      ],
+      "spouses": [
+        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+      ],
+      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e",
+      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
+    },
+    "id": "6f27d934-b1cc-4064-b60b-eb2e636134a0",
+    "data": {
+      "first name": "Richard",
+      "last name": "Barolin Bueno",
+      "birthday": "1977-10-29",
+      "avatar": "assets/img/profile/M.jpg",
+      "gender": "M"
+    }
+  }
+]
