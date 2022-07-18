@@ -13,18 +13,28 @@ if ($mysqli -> connect_errno) {
 if ($sql = $mysqli -> query("SELECT * 
 								FROM person 
 								where last_name 
-								LIKE '%BAROLIN%' 
-								OR last_name LIKE '%BUENO%'
-								OR last_name LIKE '%DASILVA%'
+								LIKE '%barolin%' 
+								OR last_name LIKE '%bueno%'
+								OR last_name LIKE '%dasilva%'
+								ORDER BY person_id
 								")) {
   
-  //$row= $result ->fetch_all();
+ // $row= $sql ->fetch_all(MYSQLI_ASSOC);
+  
+  
   
 }
 
 
-$resResult=[];
+
 while($row=$sql->fetch_object()){
+	$resResult=[];
+	unset($spouses);
+	unset($children);
+	unset($father);
+	unset($mother);
+	
+	
 	$data = array(
 					"id"    =>  $row->id,
 					"data"  =>  array(
@@ -36,10 +46,10 @@ while($row=$sql->fetch_object()){
 													)
 								);
 				
-	if( count( explode(",",$row->spouses) ) > 0 ){
+	if( $row->spouses != "" ){
 		$spouses = array("rels" => array("spouses" => explode(",",$row->spouses) ));
 	}
-	if( count( explode(",",$row->children) ) > 0 ){
+	if( $row->children != "" ){
 		$children = array("rels" => array("children" => explode(",",$row->children) ));
 	}
 	if($row->father != ""){
@@ -53,7 +63,7 @@ while($row=$sql->fetch_object()){
 	if( (isset($mother)) ){     $resResult = array_replace_recursive($mother,$resResult);   }
 	if( (isset($spouses)) ){    $resResult = array_replace_recursive($spouses,$resResult);  }
 	if( (isset($children)) ){   $resResult = array_replace_recursive($children,$resResult); }
-	$res[] = array_merge($resResult,$data);
+	$res[] = array_merge($data,$resResult);
 } 
 
 $mysqli -> close();
@@ -62,4 +72,6 @@ $mysqli -> close();
 
 <?php
 print_r( json_encode($res) );
+//print_r( $res );
 ?>
+

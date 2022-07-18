@@ -39,9 +39,13 @@
 			
 			
             if($sql->rowCount() > 0){
-				$resResult =[];
 				
 				while($row=$sql->fetchObject()){
+					$resResult=[];
+					unset($spouses);
+					unset($children);
+					unset($father);
+					unset($mother);
 					$data = array(
 									"id"    =>  $row->id,
 									"data"  =>  array(
@@ -53,10 +57,10 @@
 													)
 								);
 				
-					if( count( explode(",",$row->spouses) ) > 0 ){
+					if($row->spouses != ""){
 						$spouses = array("rels" => array("spouses" => explode(",",$row->spouses) ));
 					}
-					if( count( explode(",",$row->children) ) > 0 ){
+					if($row->children != ""){
 						$children = array("rels" => array("children" => explode(",",$row->children) ));
 					}
 					if($row->father != ""){
