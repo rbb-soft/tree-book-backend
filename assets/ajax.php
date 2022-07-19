@@ -21,4 +21,12 @@
         case "getJson":
 			echo $treeBook->GetPersons("barolin,bueno,dasilva");
 		break;
+	////
+		case "setJson":
+			echo $treeBook->SetPersons($data['tree']);
+		break;
+	////
+		default:
+			echo json_encode( array("status" => "ninguna peticion!") );
+		break;
 	}
