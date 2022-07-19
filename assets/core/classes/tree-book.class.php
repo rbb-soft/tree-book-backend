@@ -90,18 +90,27 @@
 										FROM person 
 										WHERE id = '$person[id]'")->rowCount() > 0 )
 				{
+					$spouses	= isset($person['rels']["spouses"])		? implode(",",$person['rels']["spouses"]) : "";
+					$children	= isset($person['rels']["children"])	? implode(",",$person['rels']["children"]) : "";
+					$father		= isset($person['rels']["father"])		? $person['rels']["father"] : "";
+					$mother		= isset($person['rels']["mother"])		? $person['rels']["mother"] : "";
 					
-					$sql=$this->base->query( "	UPDATE person 
-												SET	first_name	= '" . $person['data']["first name"] ."', 
-													last_name	= '" . $person['data']["last name"] ."', 
-													birthday	= '" . $person['data']["birthday"] ."',
-													avatar		= '" . $person['data']["avatar"] ."',
-													gender		= '" . $person['data']["gender"] ."' 
-												WHERE id = '$person[id]'");
+					$sql=$this->base->query(
+					"	UPDATE person 
+						SET	first_name	= '" . $person['data']["first name"]."', 
+						last_name	= '" . $person['data']["last name"] ."', 
+						birthday	= '" . $person['data']["birthday"]	."',
+						avatar		= '" . $person['data']["avatar"]	."',
+						gender		= '" . $person['data']["gender"]	."',
+						spouses		= '" . $spouses	."',
+						children	= '" . $children	."',
+						father		= '" . $father	."',
+						mother		= '" . $mother	."'
+						WHERE id = '$person[id]'");
 				////
 					if( $sql->rowCount() > 0 ){
 						$rows++;
-						$result = array(
+						$result = array	(
 										"status" => "ok",
 										"update" => "actualizado $rows personas"
 										);
@@ -112,10 +121,10 @@
 					unset($mother);
 					unset($spouses);
 					unset($children);
-					$father		= isset($person['data']["father"]) 	? $person['data']["father"] : "";
-					$mother		= isset($person['data']["mother"]) 	? $person['data']["mother"] : "";
-					$spouses	= isset($person['data']["spouses"])	? implode(",",$person['data']["spouses"]) : "";
-					$children	= isset($person['data']["children"])? implode(",",$person['data']["children"]) : "";
+					$father		= isset($person['rels']["father"]) 	? $person['rels']["father"] : "";
+					$mother		= isset($person['rels']["mother"]) 	? $person['rels']["mother"] : "";
+					$spouses	= isset($person['rels']["spouses"])	? implode(",",$person['rels']["spouses"]) : "";
+					$children	= isset($person['rels']["children"])? implode(",",$person['rels']["children"]) : "";
 					$sql=$this->base->query("INSERT INTO 
 												person(
 													person_id,
@@ -148,7 +157,7 @@
 						$rows++;
 						$result = array(
 										"status" => "ok",
-										"insert" => $person['data']["first name"]
+										"insert" => "agragados $rows"
 										);
 					}
 				}
