@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-07-2022 a las 17:38:05
+-- Tiempo de generación: 20-07-2022 a las 21:32:00
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
 
@@ -38,7 +38,7 @@ CREATE TABLE `person` (
   `first_name` varchar(22) COLLATE latin1_spanish_ci NOT NULL,
   `last_name` varchar(22) COLLATE latin1_spanish_ci NOT NULL,
   `birthday` date NOT NULL,
-  `avatar` varchar(64) COLLATE latin1_spanish_ci NOT NULL,
+  `avatar` varchar(128) COLLATE latin1_spanish_ci NOT NULL,
   `gender` enum('M','F') COLLATE latin1_spanish_ci NOT NULL,
   `lastnames_tree` varchar(1024) COLLATE latin1_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
@@ -48,11 +48,19 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`person_id`, `id`, `father`, `mother`, `spouses`, `children`, `first_name`, `last_name`, `birthday`, `avatar`, `gender`, `lastnames_tree`) VALUES
-(1, '7f0a8ee0-2567-4373-a7b8-aaceac8f7004', '', '', 'ac09352e-c5de-42dc-bd34-d78d6d13071c,e6e06497-d536-4d9c-9881-afa8997dc30e', '6f27d934-b1cc-4064-b60b-eb2e636134a0,c0051725-6db3-4155-bb58-672d731850e7', 'Nelson', 'Barolin Maeso', '1954-12-21', 'assets/img/M.jpg', 'M', ''),
-(2, 'ac09352e-c5de-42dc-bd34-d78d6d13071c', '', '', '7f0a8ee0-2567-4373-a7b8-aaceac8f7004', '6f27d934-b1cc-4064-b60b-eb2e636134a0', 'Lourdes Graciela', 'Bueno', '1956-03-03', 'assets/img/profile/F.jpg', 'F', ''),
-(3, 'c0051725-6db3-4155-bb58-672d731850e7', '7f0a8ee0-2567-4373-a7b8-aaceac8f7004', 'e6e06497-d536-4d9c-9881-afa8997dc30e', '', '', 'Nelson Gabriel', 'Barolin Dasiva', '1990-03-04', 'assets/img/profile/M.jpg', 'M', ''),
-(4, 'e6e06497-d536-4d9c-9881-afa8997dc30e', '', '', '7f0a8ee0-2567-4373-a7b8-aaceac8f7004', 'c0051725-6db3-4155-bb58-672d731850e7', 'Iris Griselda', 'Dasilva Caetano', '1966-06-30', 'assets/img/profile/F.jpg', 'F', ''),
-(5, '6f27d934-b1cc-4064-b60b-eb2e636134a0', '7f0a8ee0-2567-4373-a7b8-aaceac8f7004', 'ac09352e-c5de-42dc-bd34-d78d6d13071c', '', '', 'Richard', 'Barolin Bueno', '1977-10-29', 'assets/img/profile/M.jpg', 'M', 'Barolin, Bueno , Dasilva');
+(27, '49744aef-7d22-429e-8d3f-cd360df028fd', '472220c9-f3d0-448e-ab30-47ef70f1f94a', '8861804a-7d67-4e0c-91be-3231cd08f0a6', '5ea06eb5-495d-4e55-8d81-b5e96db7d8ca,0f043baa-2389-4fd2-b577-c3360ed6a128', 'd0a12fc3-25e6-42b2-8403-536cf3b9b7bb,b3609861-bf17-4721-b272-86412de9051a,df6983dc-ba64-4f95-baa3-e8349bb53e3b,0831a641-3f2a-4e8d-a944-049279894f86,86ffe45d-b40b-43ef-81bc-9e26bb6d0ee4,10e3dfb3-3357-4da5-8f15-5c80bd0e96cd,10290d7e-c815-42ce-b539-ebdf9bb58b7c,81cca70d-8200-4779-8698-48c79aeb3841', 'Nelson', 'Barolin Maeso', '1954-12-21', 'http://localhost/assets/img/profile/M.jpg', 'M', ''),
+(69, '472220c9-f3d0-448e-ab30-47ef70f1f94a', '', '', '8861804a-7d67-4e0c-91be-3231cd08f0a6', '49744aef-7d22-429e-8d3f-cd360df028fd', 'Elvio', 'Barolin', '0000-00-00', 'http://localhost/assets/img/profile/M.jpg', 'M', ''),
+(70, '8861804a-7d67-4e0c-91be-3231cd08f0a6', '', '', '472220c9-f3d0-448e-ab30-47ef70f1f94a', '49744aef-7d22-429e-8d3f-cd360df028fd', 'Marta', 'Maeso', '0000-00-00', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(71, '5ea06eb5-495d-4e55-8d81-b5e96db7d8ca', '', '', '49744aef-7d22-429e-8d3f-cd360df028fd', 'd0a12fc3-25e6-42b2-8403-536cf3b9b7bb,b3609861-bf17-4721-b272-86412de9051a,df6983dc-ba64-4f95-baa3-e8349bb53e3b', 'Lourdes Graciela', 'Bueno', '1956-07-03', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(72, '0f043baa-2389-4fd2-b577-c3360ed6a128', '', '', '49744aef-7d22-429e-8d3f-cd360df028fd', '0831a641-3f2a-4e8d-a944-049279894f86,86ffe45d-b40b-43ef-81bc-9e26bb6d0ee4,10e3dfb3-3357-4da5-8f15-5c80bd0e96cd,10290d7e-c815-42ce-b539-ebdf9bb58b7c,81cca70d-8200-4779-8698-48c79aeb3841', 'Iris Giriselda', 'Dasilva Caetano', '1966-06-30', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(73, 'd0a12fc3-25e6-42b2-8403-536cf3b9b7bb', '49744aef-7d22-429e-8d3f-cd360df028fd', '5ea06eb5-495d-4e55-8d81-b5e96db7d8ca', '', '', 'Richard', 'Barolin Bueno', '1977-10-29', 'http://localhost/assets/img/profile/M.jpg', 'M', ''),
+(74, 'b3609861-bf17-4721-b272-86412de9051a', '49744aef-7d22-429e-8d3f-cd360df028fd', '5ea06eb5-495d-4e55-8d81-b5e96db7d8ca', '', '', 'Silvana', 'Barolin Bueno', '1975-08-12', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(75, 'df6983dc-ba64-4f95-baa3-e8349bb53e3b', '49744aef-7d22-429e-8d3f-cd360df028fd', '5ea06eb5-495d-4e55-8d81-b5e96db7d8ca', '', '', 'Lorena', 'Barolin Bueno', '1985-07-06', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(76, '0831a641-3f2a-4e8d-a944-049279894f86', '49744aef-7d22-429e-8d3f-cd360df028fd', '0f043baa-2389-4fd2-b577-c3360ed6a128', '', '', 'Nelson Gabriel', 'Barolin Dasilva', '1990-03-04', 'http://localhost/assets/img/profile/M.jpg', 'M', ''),
+(77, '86ffe45d-b40b-43ef-81bc-9e26bb6d0ee4', '49744aef-7d22-429e-8d3f-cd360df028fd', '0f043baa-2389-4fd2-b577-c3360ed6a128', '', '', 'Romina Paola', 'Barolin Dasilva', '0000-00-00', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(78, '10e3dfb3-3357-4da5-8f15-5c80bd0e96cd', '49744aef-7d22-429e-8d3f-cd360df028fd', '0f043baa-2389-4fd2-b577-c3360ed6a128', '', '', 'Yanina', 'Barolin Dasilva', '0000-00-00', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(79, '10290d7e-c815-42ce-b539-ebdf9bb58b7c', '49744aef-7d22-429e-8d3f-cd360df028fd', '0f043baa-2389-4fd2-b577-c3360ed6a128', '', '', 'Marianela', 'Barolin Dasilva', '0000-00-00', 'http://localhost/assets/img/profile/F.jpg', 'F', ''),
+(80, '81cca70d-8200-4779-8698-48c79aeb3841', '49744aef-7d22-429e-8d3f-cd360df028fd', '0f043baa-2389-4fd2-b577-c3360ed6a128', '', '', 'Tamara Belen', 'Barolin Dasilva', '0000-00-00', 'http://localhost/assets/img/profile/F.jpg', 'F', '');
 
 --
 -- Índices para tablas volcadas
@@ -72,7 +80,7 @@ ALTER TABLE `person`
 -- AUTO_INCREMENT de la tabla `person`
 --
 ALTER TABLE `person`
-  MODIFY `person_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `person_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

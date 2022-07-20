@@ -19,11 +19,11 @@
 	switch($data['action']){
 
         case "getJson":
-			echo $treeBook->GetPersons("barolin,bueno,dasilva");
+			echo $treeBook->GetPersons( $treeBook->GetLastNameCloud("d0a12fc3-25e6-42b2-8403-536cf3b9b7bb") );
 		break;
 	////
 		case "setJson":
-			echo $treeBook->SetPersons($data['tree']);
+			echo $treeBook->SetPersons($data['tree'],$data['lastnameCloud']);
 		break;
 	////
 		default:

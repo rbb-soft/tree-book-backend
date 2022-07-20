@@ -1,108 +1,254 @@
 [
   {
-    "rels": {
-      "children": [
-        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
-        "c0051725-6db3-4155-bb58-672d731850e7"
-      ],
-      "spouses": [
-        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
-        "e6e06497-d536-4d9c-9881-afa8997dc30e"
-      ]
-    },
-    "id": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004",
     "data": {
       "first name": "Nelson",
       "last name": "Barolin Maeso",
       "birthday": "1954-12-21",
-      "avatar": "assets/img/M.jpg",
+      "avatar": "http://localhost/assets/img/profile/M.jpg",
       "gender": "M"
-    }
-  },
-  {
+    },
     "rels": {
-      "children": [
-        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
-        "c0051725-6db3-4155-bb58-672d731850e7"
-      ],
+      "father": "0f1b2187-3c97-4bc3-b1b8-c5f28a32d56d",
+      "mother": "c9f2200a-f258-46ea-905a-b4249f6ebff2",
       "spouses": [
-        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
-        "e6e06497-d536-4d9c-9881-afa8997dc30e"
+        "6026fd13-fbde-497c-8a56-250c2f2ef8aa",
+        "f82274df-ab2b-477b-be36-7684855d9632"
+      ],
+      "children": [
+        "ed1c0b80-4453-4597-921b-54834aa7d472",
+        "5ab630c5-f0e0-412a-842f-e902e03d927f",
+        "f5106fa3-30fb-4ac6-9abb-fb623fa9f78f",
+        "8f75fb10-0b32-40e3-beb0-d1e09e387968",
+        "aad3658f-0139-4418-b9ff-dc04974ee270",
+        "66a1afbe-8a1e-4da9-89ce-1f4400c571c4",
+        "5cf9291c-32ad-4a51-9fda-2d38091bbf15",
+        "70d2c63d-9900-480e-b095-fcc8e40b9a31"
       ]
     },
-    "id": "ac09352e-c5de-42dc-bd34-d78d6d13071c",
+    "id": "49744aef-7d22-429e-8d3f-cd360df028fd",
+    "main": true
+  },
+  {
+    "data": {
+      "first name": "Elvio",
+      "last name": "Barolin",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/M.jpg",
+      "gender": "M"
+    },
+    "rels": {
+      "spouses": [
+        "c9f2200a-f258-46ea-905a-b4249f6ebff2"
+      ],
+      "children": [
+        "49744aef-7d22-429e-8d3f-cd360df028fd"
+      ]
+    },
+    "id": "0f1b2187-3c97-4bc3-b1b8-c5f28a32d56d",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Marta",
+      "last name": "Maeso",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "spouses": [
+        "0f1b2187-3c97-4bc3-b1b8-c5f28a32d56d"
+      ],
+      "children": [
+        "49744aef-7d22-429e-8d3f-cd360df028fd"
+      ]
+    },
+    "id": "c9f2200a-f258-46ea-905a-b4249f6ebff2",
+    "main": false
+  },
+  {
     "data": {
       "first name": "Lourdes Graciela",
       "last name": "Bueno",
-      "birthday": "1956-03-03",
-      "avatar": "assets/img/profile/F.jpg",
+      "birthday": "1956-07-03",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
       "gender": "F"
-    }
+    },
+    "rels": {
+      "spouses": [
+        "49744aef-7d22-429e-8d3f-cd360df028fd"
+      ],
+      "children": [
+        "ed1c0b80-4453-4597-921b-54834aa7d472",
+        "5ab630c5-f0e0-412a-842f-e902e03d927f",
+        "f5106fa3-30fb-4ac6-9abb-fb623fa9f78f"
+      ]
+    },
+    "id": "6026fd13-fbde-497c-8a56-250c2f2ef8aa",
+    "main": false
   },
   {
-    "rels": {
-      "children": [
-        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
-        "c0051725-6db3-4155-bb58-672d731850e7"
-      ],
-      "spouses": [
-        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
-        "e6e06497-d536-4d9c-9881-afa8997dc30e"
-      ],
-      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e",
-      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
-    },
-    "id": "c0051725-6db3-4155-bb58-672d731850e7",
     "data": {
-      "first name": "Nelson Gabriel",
-      "last name": "Barolin Dasiva",
-      "birthday": "1990-03-04",
-      "avatar": "assets/img/profile/M.jpg",
-      "gender": "M"
-    }
-  },
-  {
-    "rels": {
-      "children": [
-        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
-        "c0051725-6db3-4155-bb58-672d731850e7"
-      ],
-      "spouses": [
-        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
-        "e6e06497-d536-4d9c-9881-afa8997dc30e"
-      ],
-      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e",
-      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
-    },
-    "id": "e6e06497-d536-4d9c-9881-afa8997dc30e",
-    "data": {
-      "first name": "Iris Griselda",
-      "last name": "Dasilva Caetano",
-      "birthday": "1966-06-30",
-      "avatar": "assets/img/profile/F.jpg",
-      "gender": "F"
-    }
-  },
-  {
-    "rels": {
-      "children": [
-        "6f27d934-b1cc-4064-b60b-eb2e636134a0",
-        "c0051725-6db3-4155-bb58-672d731850e7"
-      ],
-      "spouses": [
-        "ac09352e-c5de-42dc-bd34-d78d6d13071c",
-        "e6e06497-d536-4d9c-9881-afa8997dc30e"
-      ],
-      "mother": "e6e06497-d536-4d9c-9881-afa8997dc30e",
-      "father": "7f0a8ee0-2567-4373-a7b8-aaceac8f7004"
-    },
-    "id": "6f27d934-b1cc-4064-b60b-eb2e636134a0",
-    "data": {
-      "first name": "Richard",
+      "first name": "Richard ",
       "last name": "Barolin Bueno",
       "birthday": "1977-10-29",
-      "avatar": "assets/img/profile/M.jpg",
+      "avatar": "http://localhost/assets/img/profile/M.jpg",
       "gender": "M"
-    }
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "6026fd13-fbde-497c-8a56-250c2f2ef8aa",
+      "spouses": [
+        "435cfeed-b989-4af5-afa0-40adf351a1ee"
+      ],
+      "children": [
+        "caf7dd0b-6b07-4f1c-864e-6af5f6ada848"
+      ]
+    },
+    "id": "ed1c0b80-4453-4597-921b-54834aa7d472",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Silvana",
+      "last name": "Barolin Bueno",
+      "birthday": "1975-08-12",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "6026fd13-fbde-497c-8a56-250c2f2ef8aa"
+    },
+    "id": "5ab630c5-f0e0-412a-842f-e902e03d927f",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Lorena",
+      "last name": "Barolin Bueno",
+      "birthday": "1985-07-06",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "6026fd13-fbde-497c-8a56-250c2f2ef8aa"
+    },
+    "id": "f5106fa3-30fb-4ac6-9abb-fb623fa9f78f",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Iris Giriselda",
+      "last name": "Dasilva Caetano",
+      "birthday": "1966-06-30",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "spouses": [
+        "49744aef-7d22-429e-8d3f-cd360df028fd"
+      ],
+      "children": [
+        "8f75fb10-0b32-40e3-beb0-d1e09e387968",
+        "aad3658f-0139-4418-b9ff-dc04974ee270",
+        "66a1afbe-8a1e-4da9-89ce-1f4400c571c4",
+        "5cf9291c-32ad-4a51-9fda-2d38091bbf15",
+        "70d2c63d-9900-480e-b095-fcc8e40b9a31"
+      ]
+    },
+    "id": "f82274df-ab2b-477b-be36-7684855d9632",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Nelson Gabriel",
+      "last name": "Barolin Dasilva",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/M.jpg",
+      "gender": "M"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "f82274df-ab2b-477b-be36-7684855d9632"
+    },
+    "id": "8f75fb10-0b32-40e3-beb0-d1e09e387968",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Romina Paola",
+      "last name": "Barolin Dasilva",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "f82274df-ab2b-477b-be36-7684855d9632"
+    },
+    "id": "aad3658f-0139-4418-b9ff-dc04974ee270",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Yanina",
+      "last name": "Barolin Dasilva",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "f82274df-ab2b-477b-be36-7684855d9632"
+    },
+    "id": "66a1afbe-8a1e-4da9-89ce-1f4400c571c4",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Marianela",
+      "last name": "Barolin Dasilva",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "f82274df-ab2b-477b-be36-7684855d9632"
+    },
+    "id": "5cf9291c-32ad-4a51-9fda-2d38091bbf15",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Tamara Belen",
+      "last name": "Barolin Dasilva",
+      "birthday": "0000-00-00",
+      "avatar": "http://localhost/assets/img/profile/F.jpg",
+      "gender": "F"
+    },
+    "rels": {
+      "father": "49744aef-7d22-429e-8d3f-cd360df028fd",
+      "mother": "f82274df-ab2b-477b-be36-7684855d9632"
+    },
+    "id": "70d2c63d-9900-480e-b095-fcc8e40b9a31",
+    "main": false
+  },
+  {
+    "data": {
+      "first name": "Brandon",
+      "last name": "Barolin",
+      "birthday": "2015-04-28",
+      "avatar": "http://localhost/assets/img/profile/M.jpg",
+      "gender": "M"
+    },
+    "rels": {
+      "father": "ed1c0b80-4453-4597-921b-54834aa7d472",
+      "mother": "435cfeed-b989-4af5-afa0-40adf351a1ee"
+    },
+    "id": "caf7dd0b-6b07-4f1c-864e-6af5f6ada848",
+    "main": false
   }
 ]

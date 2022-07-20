@@ -5,34 +5,24 @@
  * @copyright 2022
  */
  /**/
+$tree = new stdclass;
+
+$tree->id = "ide+2wlrf+eqjrg0qejnr0ginj";
+
+$tree->data = new stdclass;
+$tree->data->first_name= "Richard";
+$tree->data->lastname_name= "barolin";
+$tree->data->birthday= "1977";
+$tree->data->avatar= "assets";
+$tree->data->gender= "M";
+
+$tree->rels= new stdclass;
+$tree->rels->father = "Nelson";
+$tree->rels->mother = "Lourdes";
+$tree->rels->spouses = ["carina"];
+$tree->rels->children = ["Brandon","Waldy","Alex"];
 
 
-$data = array(
-                "data" => array(
-                                "fisrt name" => "Nelson",
-                                "last name" => "Barolin",
-                                "birthday" => "1954",
-                                "avatar" => "assets",
-                                "gender" => "M",
-                )
-);
-
-
-$father = array("rels" => array("father" => "Elvio Barolin"));
-
-$mother = array("rels" => array("mother" => "Marta Maeso"));
-
-$spouses = array("rels" => array("spouses" => ["lourdes", "griselda"]));
-
-$children = array("rels" => array("children" => ["Nelsito", "richard"]));
-
-$resResult =[];
-if( (isset($father)) ){     $resResult = array_replace_recursive($father,$resResult);   }
-if( (isset($mother)) ){     $resResult = array_replace_recursive($mother,$resResult);   }
-if( (isset($spouses)) ){    $resResult = array_replace_recursive($spouses,$resResult);  }
-if( (isset($children)) ){   $resResult = array_replace_recursive($children,$resResult); }
-
-$res[] = array_replace_recursive($resResult,$data);
 
 
 
@@ -40,6 +30,11 @@ $res[] = array_replace_recursive($resResult,$data);
 
 <pre>
 <?php
-print_r( $res );
+print_r( $tree );
+?>
+</pre>
+<pre>
+<?php
+print_r( json_encode($tree) );
 ?>
 </pre>

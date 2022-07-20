@@ -32,43 +32,36 @@
 			foreach($val as $lastname){
 				$LIKE.=" OR last_name LIKE '%$lastname%'";
 			}
-		///
+		/// 
             $sql=$this->base->query("SELECT * FROM person WHERE $LIKE");
 			if($sql->rowCount() > 0){
-				while($row=$sql->fetchObject()){
-					$resResult= array("rels" => []);
-					unset($spouses);
-					unset($children);
-					unset($father);
-					unset($mother);
-					$data = array(
-									"id"    =>  $row->id,
-									"data"  =>  array(
-													"first name" => $row->first_name,
-													"last name"  => $row->last_name,
-													"birthday"   => $row->birthday,
-													"avatar"	 => $row->avatar,
-													"gender"	 => $row->gender
-													)
-								);
 				
-					if($row->spouses != ""){
-						$spouses = array("rels" => array("spouses" => explode(",",$row->spouses) ));
-					}
-					if($row->children != ""){
-						$children = array("rels" => array("children" => explode(",",$row->children) ));
-					}
+				while($row=$sql->fetchObject()){
+					unset($tree);
+					$tree = new stdclass;
+					$tree->data=[];
+					$tree->rels = new stdclass;
+					$tree->id = $row->id;
+					$tree->data = array	(
+											"first name"	=> $row->first_name,
+											"last name"		=> $row->last_name,
+											"birthday" 		=> $row->birthday,
+											"avatar" 		=> $row->avatar,
+											"gender" 		=> $row->gender,
+										);
 					if($row->father != ""){
-						$father = array("rels" => array("father" => $row->father));
+						$tree->rels->father = $row->father;
 					}
 					if($row->mother != ""){
-						$mother = array("rels" => array("mother" => $row->mother));
+						$tree->rels->mother = $row->mother;
 					}
-					if( (isset($father)) ){     $resResult = array_replace_recursive($father,$resResult);   }
-					if( (isset($mother)) ){     $resResult = array_replace_recursive($mother,$resResult);   }
-					if( (isset($spouses)) ){    $resResult = array_replace_recursive($spouses,$resResult);  }
-					if( (isset($children)) ){   $resResult = array_replace_recursive($children,$resResult); }
-					$res[] = array_merge($resResult,$data);
+					if($row->spouses != ""){
+						$tree->rels->spouses = explode(",",$row->spouses);
+					}
+					if($row->children != ""){
+						$tree->rels->children = explode(",",$row->children);
+					}
+					$res[]= $tree;
 				}
 				$result	=	array(
 								"status"	=>	"ok",
@@ -80,7 +73,7 @@
 			return json_encode( $result );
 		}
 		/****************************************************************************************************** */
-		public function SetPersons($tree){
+		public function SetPersons($tree,$lastnameCloud){
 			$rows=0;
 			$result = [];
 			
@@ -98,14 +91,15 @@
 					$sql=$this->base->query(
 					"	UPDATE person 
 						SET	first_name	= '" . $person['data']["first name"]."', 
-						last_name	= '" . $person['data']["last name"] ."', 
-						birthday	= '" . $person['data']["birthday"]	."',
-						avatar		= '" . $person['data']["avatar"]	."',
-						gender		= '" . $person['data']["gender"]	."',
-						spouses		= '" . $spouses	."',
-						children	= '" . $children	."',
-						father		= '" . $father	."',
-						mother		= '" . $mother	."'
+						last_name		= '" . $person['data']["last name"] ."', 
+						birthday		= '" . $person['data']["birthday"]	."',
+						avatar			= '" . $person['data']["avatar"]	."',
+						gender			= '" . $person['data']["gender"]	."',
+						spouses			= '" . $spouses	."',
+						children		= '" . $children	."',
+						father			= '" . $father	."',
+						mother			= '" . $mother	."',
+						lastnames_tree	= '" . implode(",",$lastnameCloud)	."'
 						WHERE id = '$person[id]'");
 				////
 					if( $sql->rowCount() > 0 ){
@@ -152,7 +146,7 @@
 													'" . $person['data']["birthday"] ."', 
 													'" . $person['data']["avatar"] ."',
 													'" . $person['data']["gender"] ."',
-													'')");
+													'" . implode(",",$lastnameCloud) ."')");
 					if( $sql->rowCount() > 0 ){
 						$rows++;
 						$result = array(
@@ -166,7 +160,13 @@
 			
 			return json_encode($result);
 		}
-        
-
-
+        /****************************************************************************************************** */
+		public function GetLastNameCloud($id){
+			$sql=$this->base->query("SELECT * FROM person WHERE id ='$id'");
+			if($sql->rowCount() > 0){
+				
+					return $sql->fetchObject()->lastnames_tree;
+			}
+		}
+		/****************************************************************************************************** */
     }// end class
