@@ -161,6 +161,26 @@
 			return json_encode($result);
 		}
         /****************************************************************************************************** */
+		public function getShortBio($id){
+				$sql=$this->base->query("SELECT * FROM person_bio WHERE person_id = '$id'");
+				
+				if($sql->rowCount() > 0){
+					$row = $sql->fetchObject();
+					$result = array(	
+										"status"	=> "ok",
+										"bio"		=>	$row
+										);
+				}else{
+					$result = array(
+										"status" => "fail",
+										"message" => $sql->errorCode()
+										);
+				}
+				
+				return json_encode($result);
+
+		}
+		/****************************************************************************************************** */
 		public function GetLastNameCloud($id){
 			$sql=$this->base->query("SELECT * FROM person WHERE id ='$id'");
 			if($sql->rowCount() > 0){

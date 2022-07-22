@@ -26,6 +26,10 @@
 			echo $treeBook->SetPersons($data['tree'],$data['lastnameCloud']);
 		break;
 	////
+		case "getShortBio":
+			echo $treeBook->getShortBio($data['id']);
+		break;
+	//// 
 		default:
 			echo json_encode( array("status" => "ninguna peticion!") );
 		break;
